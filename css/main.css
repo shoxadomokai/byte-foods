@@ -114,6 +114,7 @@ header .navigation {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  opacity: 0;
 }
 
 header .navigation .logo {

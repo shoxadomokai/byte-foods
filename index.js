@@ -10,5 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
   selectDish();
   hoverEffects();
   fetchPage();
-  //   loadAnimation();
+  loadAnimation();
 });

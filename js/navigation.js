@@ -94,12 +94,9 @@ export const fetchPage = () => {
 };
 
 const getPage = async (linkName) => {
-  let baseURL = `${window.location.protocol}//${window.location.hostname}`;
+  let baseURL = window.location.href;
 
-  if (window.location.port) {
-    baseURL += `:${window.location.port}`;
-  }
-  const response = await fetch(`${baseURL}/${linkName}.html`, {
+  const response = await fetch(`${baseURL}${linkName}.html`, {
     method: "GET",
   });
 

@@ -99,12 +99,14 @@ h1 {
 
 header {
   height: 10vh;
+
   .navigation {
     padding: 1.5rem 2.5rem;
     display: flex;
     height: fit-content;
     align-items: center;
     justify-content: space-between;
+    opacity: 0;
 
     .logo {
       height: 35px;
@@ -221,6 +223,7 @@ header {
     position: relative;
     width: 100%;
     text-align: center;
+
     // overflow: hidden;
     .image {
       position: absolute;
@@ -256,6 +259,7 @@ header {
         top: 15%;
         left: 5%;
       }
+
       &.right {
         transform: translate(-50%, -50%) rotate(30deg) scale(0.1);
         top: 70%;

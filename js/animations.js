@@ -4,11 +4,18 @@ export const loadAnimation = () => {
       easing: "easeOutExpo",
     })
     .add({
-      targets: ".logo img",
-      translateX: [-150, 0],
-      delay: 1000,
-      opacity: [0, 1],
+      targets: ".navigation",
+      opacity: 1,
     })
+    .add(
+      {
+        targets: ".logo img",
+        translateX: [-150, 0],
+        delay: 1000,
+        opacity: [0, 1],
+      },
+      "-=1000"
+    )
     .add({
       targets: ".btn-group .btn",
       opacity: [0, 1],
