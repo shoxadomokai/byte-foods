@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Byte Foods</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header>
+        <nav class="navigation">
+            <div class="logo">
+                <img src="img/landscape-logo-white.svg" alt="">
+            </div>
+            <div class="actions">
+                <div class="btn-group">
+                    <button class="btn">Download the App</button>
+                    <button class="btn">Order Online</button>
+                </div>
+                <ul class="nav-list" id="nav-list">
+                    <li class="nav-links">Pasta</li>
+                    <li class="nav-links">Rice</li>
+                    <li class="nav-links">Swallow</li>
+                    <li class="nav-links active">Snacks</li>
+                    <li class="nav-links">Salads</li>
+                </ul>
+                <div class="menu-icon" id="menu-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="hero padding-xy">
+        <div class="content-wrapper" id="content-wrapper">
+            <h1 class="title">SALADS</h1>
+            <div class="image">
+                <img data-patty="penne" src="img/penne.png" alt="" class="active content-image">
+            </div>
+            <div class="image">
+                <img data-patty="spaghetti" src="img/spaghetti.png" alt="" class="left content-image">
+            </div>
+            <div class="image">
+                <img data-patty="macaroni" src="img/macaroni.png" alt="" class="right content-image">
+            </div>
+        </div>
+        <ul id="content-list" class="content-list">
+            <li data-patty="penne" class="content-link active">PENNE</li>
+            <li data-patty="spaghetti" class="content-link">SPAGHETTI</li>
+            <li data-patty="macaroni" class="content-link">MACARONI</li>
+        </ul>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script type="module" defer src="index.js"></script>
+</body>
+
+</html>
