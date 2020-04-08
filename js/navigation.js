@@ -94,9 +94,15 @@ export const fetchPage = () => {
 };
 
 const getPage = async (linkName) => {
-  const response = await fetch(`/${linkName}.html`, {
+  let baseURL = `${window.location.protocol}//${window.location.hostname}`;
+
+  if (window.location.port) {
+    baseURL += `:${window.location.port}`;
+  }
+  const response = await fetch(`${baseURL}/${linkName}.html`, {
     method: "GET",
   });
+
   try {
     const page = await response.text();
     var parser = new DOMParser();

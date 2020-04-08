@@ -15,5 +15,3 @@ The names of the links are currently set to match the names of the html files (A
 Using event.target we pass the link to the fetch API which retrieves the new page.
 
 Once the new page is loaded, the old page is animated out and the new page is animated in. The Promises embedded in the fetch API make it possible to add page loading animations as well (coming soon maybe).
-
-Simple
