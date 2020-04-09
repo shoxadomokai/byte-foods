@@ -11,7 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Byte Foods</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link id="favicon" rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
+    <link rel="manifest" href="img/icons/site.webmanifest">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -25,15 +30,15 @@
             <div class="logo">
                 <img src="img/landscape-logo-white.svg" alt="">
             </div>
-            <div class="actions">
+            <div class="actions open">
                 <div class="btn-group">
                     <button class="btn">Download the App</button>
                     <button class="btn">Order Online</button>
                 </div>
                 <ul class="nav-list" id="nav-list">
                     <li class="nav-links">Pasta</li>
-                    <li class="nav-links active">Rice</li>
-                    <li class="nav-links">Swallow</li>
+                    <li class="nav-links">Rice</li>
+                    <li class="nav-links active">Swallow</li>
                     <li class="nav-links">Snacks</li>
                     <li class="nav-links">Salads</li>
                 </ul>
@@ -46,27 +51,59 @@
 
         </nav>
     </header>
+
     <main class="hero padding-xy">
         <div class="content-wrapper" id="content-wrapper">
             <h1 class="title">SWALLOW</h1>
             <div class="image">
-                <img data-patty="eba" src="img/jollof.png" alt="" class="active content-image">
+                <img data-patty="okro" src="img/okro-soup.png" alt="" class="active content-image">
             </div>
             <div class="image">
-                <img data-patty="pounded-yam" src="img/fried.png" alt="" class="left content-image">
+                <img data-patty="egusi" src="img/egusi-soup.png" alt="" class="left content-image">
             </div>
             <div class="image">
-                <img data-patty="semo" src="img/ofada.png" alt="" class="right content-image">
+                <img data-patty="efo" src="img/efo-riro.png" alt="" class="right content-image">
             </div>
         </div>
         <ul id="content-list" class="content-list">
-            <li data-patty="eba" class="content-link active">EBA</li>
-            <li data-patty="pounded-yam" class="content-link">POUNDED YAM</li>
-            <li data-patty="semo" class="content-link">SEMO</li>
+            <li data-patty="okro" class="content-link active">OKRO</li>
+            <li data-patty="egusi" class="content-link">EGUSI</li>
+            <li data-patty="efo" class="content-link">EFO</li>
         </ul>
     </main>
 
+    <div class="grid padding-x">
+        <div class="box">
+            <div class="box-image">
+                <img src="/img/double-wahala.jpg" alt="picture of the double wahala burger">
+            </div>
+            <div class="box-body">
+                <h3 class="box-title title">DOUBLE WAHALA</h3>
+                <p class="box-info">Our signature burger, takes two jaws to bite into...</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image">
+                <img src="./img/rough-play.jpg" alt="picture of the rough play burger">
+            </div>
+            <div class="box-body">
+                <h3 class="box-title title">ROUGH PLAY</h3>
+                <p class="box-info">Suya burger like you imagined it. Hot and spicy</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-image">
+                <img src="./img/rough-play.jpg" alt="picture of the rough play burger">
+            </div>
+            <div class="box-body">
+                <h3 class="box-title title">ROUGH PLAY</h3>
+                <p class="box-info">Suya burger like you imagined it. Hot and spicy</p>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="module" defer src="index.js"></script>
 </body>
 

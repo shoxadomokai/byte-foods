@@ -41,10 +41,9 @@ export const loadAnimation = () => {
     })
     .add({
       targets: ".content-wrapper .image",
-      translateY: [-500, 0],
-      opacity: [0, 1],
-      delay: anime.stagger(500),
-      duration: 2000,
+      translateY: [-2000, 0],
+      delay: anime.stagger(200),
+      duration: 700,
     })
     .add(
       {
@@ -55,5 +54,12 @@ export const loadAnimation = () => {
         duration: 2000,
       },
       "-=3500"
-    );
+    )
+    .add({
+      targets: ".grid",
+      translateY: [500, 0],
+      opacity: [0, 1],
+      delay: anime.stagger(500),
+      duration: 2000,
+    });
 };

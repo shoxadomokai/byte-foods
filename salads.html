@@ -10,8 +10,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Byte Foods</title>
-    <meta name="description" content="">
+    <meta name="description"
+        content="Byte Foods is a concept website for a food delivery company built using Fetch for dynamic routing">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link id="favicon" rel="icon" type="image/x-icon" href="img/icons/favicon.ico">
+    <link rel="manifest" href="img/icons/site.webmanifest">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -34,8 +40,8 @@
                     <li class="nav-links">Pasta</li>
                     <li class="nav-links">Rice</li>
                     <li class="nav-links">Swallow</li>
-                    <li class="nav-links active">Snacks</li>
-                    <li class="nav-links">Salads</li>
+                    <li class="nav-links">Snacks</li>
+                    <li class="nav-links active">Salads</li>
                 </ul>
                 <div class="menu-icon" id="menu-toggle">
                     <div class="line"></div>
@@ -50,23 +56,24 @@
         <div class="content-wrapper" id="content-wrapper">
             <h1 class="title">SALADS</h1>
             <div class="image">
-                <img data-patty="penne" src="img/penne.png" alt="" class="active content-image">
+                <img data-patty="ceaser" src="img/ceaser-salad.png" alt="" class="active content-image">
             </div>
             <div class="image">
-                <img data-patty="spaghetti" src="img/spaghetti.png" alt="" class="left content-image">
+                <img data-patty="chicken" src="img/chicken-salad.png" alt="" class="left content-image">
             </div>
             <div class="image">
-                <img data-patty="macaroni" src="img/macaroni.png" alt="" class="right content-image">
+                <img data-patty="greek" src="img/greek-salad.png" alt="" class="right content-image">
             </div>
         </div>
         <ul id="content-list" class="content-list">
-            <li data-patty="penne" class="content-link active">PENNE</li>
-            <li data-patty="spaghetti" class="content-link">SPAGHETTI</li>
-            <li data-patty="macaroni" class="content-link">MACARONI</li>
+            <li data-patty="ceaser" class="content-link active">CEASER</li>
+            <li data-patty="chicken" class="content-link">CHICKEN</li>
+            <li data-patty="greek" class="content-link">GREEK</li>
         </ul>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script type="module" defer src="index.js"></script>
 </body>
 

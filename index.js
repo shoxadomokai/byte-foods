@@ -1,4 +1,4 @@
-import { selectDish, hoverEffects, fetchPage } from "./js/navigation.js";
+import { selectDish, fetchPage } from "./js/navigation.js";
 import { loadAnimation } from "./js/animations.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   selectDish();
-  hoverEffects();
   fetchPage();
   loadAnimation();
 });

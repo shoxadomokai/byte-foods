@@ -12,7 +12,9 @@ body {
   background: #141414;
   font-family: "Avenir LT Std", Tahoma, Geneva, Verdana, sans-serif;
   color: whitesmoke;
-  overflow: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  padding-bottom: 100px;
 
   &::after {
     content: "";
@@ -22,7 +24,7 @@ body {
     height: 30px;
     width: 100%;
     left: 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     opacity: 0.5;
   }
@@ -103,10 +105,11 @@ header {
   .navigation {
     padding: 1.5rem 2.5rem;
     display: flex;
+    flex-wrap: wrap;
     height: fit-content;
     align-items: center;
     justify-content: space-between;
-    opacity: 0;
+    // opacity: 0;
 
     .logo {
       height: 35px;
@@ -210,6 +213,55 @@ header {
         }
       }
     }
+
+    @media only screen and (max-width: 998px) {
+
+      position: relative;
+
+      .actions {
+        position: absolute;
+        top: 24px;
+        right: 20px;
+
+        .btn-group {
+          position: fixed;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          bottom: 4rem;
+          left: 0;
+        }
+
+        .menu-icon {
+          position: absolute !important;
+          top: 0 !important;
+          right: 0;
+        }
+
+        .nav-list {
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translateY(-110px);
+          writing-mode: vertical-lr;
+
+          .nav-links {
+            margin-left: 0;
+            margin-bottom: 25px;
+          }
+        }
+
+        &.open {
+          .nav-list {
+            position: absolute;
+            // top: 0;
+            // right: 0;
+            transform: translateY(50px);
+          }
+
+        }
+      }
+    }
   }
 }
 
@@ -217,14 +269,21 @@ header {
   height: 90vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  overflow: hidden;
+
+  @media only screen and (max-width: 998px) {
+    height: unset;
+    // min-height: 90vh;
+  }
+
 
   .content-wrapper {
     position: relative;
     width: 100%;
     text-align: center;
 
-    // overflow: hidden;
     .image {
       position: absolute;
       height: 100%;
@@ -232,6 +291,10 @@ header {
       top: 0;
       left: 0;
       right: 0;
+
+      @media only screen and (max-width: 500px) {
+        top: 50%;
+      }
     }
 
     .content-image {
@@ -240,6 +303,10 @@ header {
       transition: 1s all ease;
       transform-origin: center;
       object-fit: contain;
+
+      @media only screen and (max-width: 500px) {
+        height: 150%;
+      }
 
       &.active {
         width: inherit;
@@ -264,6 +331,10 @@ header {
         transform: translate(-50%, -50%) rotate(30deg) scale(0.1);
         top: 70%;
         left: 95%;
+
+        @media only screen and (max-width: 500px) {
+          top: 15%;
+        }
       }
     }
   }
@@ -274,12 +345,21 @@ header {
     display: flex;
     font-size: 1.25rem;
 
+    @media only screen and (max-width: 500px) {
+      font-size: 1rem;
+      margin-top: 100px;
+    }
+
     .content-link {
       margin-right: 20px;
       display: flex;
       align-items: center;
       cursor: pointer;
       transition: 0.2s color ease-out;
+
+      @media only screen and (max-width: 998px) {
+        margin-right: 10px;
+      }
 
       &:hover,
       &:focus,
@@ -293,12 +373,70 @@ header {
         width: 2px;
         background-color: whitesmoke;
         margin-left: 20px;
+
+        @media only screen and (max-width: 998px) {
+          margin-left: 10px;
+        }
       }
 
       &:last-of-type {
         &::after {
           all: unset;
         }
+      }
+    }
+  }
+}
+
+.grid {
+  display: flex;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .box {
+    background: #232323;
+    border-radius: 10px;
+    height: 280px;
+    width: 25%;
+    float: left;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
+    }
+
+    @media (min-width: 801px) and (max-width: 1200px) {
+      width: 38%
+    }
+
+    .box-image {
+      height: 150px;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .box-body {
+      padding: 1rem 2rem;
+
+      .box-title {
+        color: $primary-color;
+        margin-bottom: 10px;
+        font-size: 25px;
+      }
+
+      .box-info {
+        color: #AFAFAF;
+        font-weight: 700;
       }
     }
   }
