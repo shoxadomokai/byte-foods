@@ -1,4 +1,6 @@
 const navList = document.getElementById("nav-list");
+const links = document.querySelectorAll(".nav-links");
+
 var iso = new Isotope(".grid", {
   itemSelector: ".box",
   layoutMode: "fitRows",
@@ -7,6 +9,7 @@ var iso = new Isotope(".grid", {
     gutter: 32,
   },
 });
+
 iso.arrange({
   filter: `.${document
     .querySelector(".content-link.active")
@@ -37,7 +40,6 @@ export const selectDish = () => {
         oldActiveImage.setAttribute("class", newActiveImage);
       }
     }
-    console.log(`.${event.target.textContent.toLowerCase()}`);
     iso.arrange({ filter: `.${event.target.textContent.toLowerCase()}` });
   });
 };
@@ -48,7 +50,6 @@ export const fetchPage = () => {
   });
 };
 
-const links = document.querySelectorAll(".nav-links");
 const getPage = async (element, isWindowNav) => {
   // let baseURL = window.location.href;
   let linkName = element.textContent.toLowerCase();
@@ -129,7 +130,7 @@ const animatePages = async (elem, isWindowNav) => {
         {
           targets: ".content-wrapper .image",
           delay: anime.stagger(200),
-          translateY: [1500, 0],
+          translateY: [-1500, 0],
           complete: (anim) => {
             selectDish();
           },
